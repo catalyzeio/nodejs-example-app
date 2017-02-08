@@ -6,7 +6,7 @@ var express = require('express'),
 var databaseURL = process.env.DATABASE_URL || 'mongodb://127.0.0.1:27017/demo';
 
 var app = express();
-app.use(function (req, res, next) {
+app.get('/', function (req, res, next) {
     MongoClient.connect(databaseURL, function (err, db) {
         if (err) {
             next(err);
@@ -45,7 +45,11 @@ app.use(function (req, res, next) {
     });
 });
 
+app.get('/ping', function (req, res) {
+    res.send('pong\n');
+});
+
 var port = process.env.PORT || 8088;
-app.listen(port, function () {
+app.listen(port, '0.0.0.0', function () {
     console.log('listening on port ' + port);
 });

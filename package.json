@@ -1,7 +1,7 @@
 {
   "name": "catalyze-nodejs-mongo-demo",
   "description": "Sample Node.js application for the Catalyze PaaS platform",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -14,7 +14,7 @@
     "node": ">=0.10.0"
   },
   "dependencies": {
-    "express": "^4.9.5",
-    "mongodb": "^1.4.12"
+    "express": "^4.14.1",
+    "mongodb": "^2.2.19"
   }
 }
