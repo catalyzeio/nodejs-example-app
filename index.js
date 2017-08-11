@@ -46,6 +46,7 @@ app.get('/', function (req, res, next) {
 });
 
 app.get('/ping', function (req, res) {
+    console.log('ping!')
     res.send('pong\n');
 });
 
